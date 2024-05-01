@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Tags</title>
+</head>
+<body>
+    <header>
+        <h1>HTML and CSS</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li>
+                <a href="/">Home</a>
+            </li>
+            <li>
+                <a href="/html">HTML</a>
+            </li>
+            <li>
+                <a href="/css">CSS</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+        <h2>HTML Tags</h2>
+        <table>
+            <thead>
+                <tr>
+                    <td>Tag</td>
+                    <td>Description</td>
+                </tr>
+            </thead>
+            {% for definition in definitions %}
+            <tr>
+                <td>{{ definition[0] }}</td>
+                <td>{{ definition[1] }} </td>
+            </tr>
+            {% endfor %}
+        </table>
+    </main>
+
+    <footer>
+
+    </footer>
+</body>
+</html>
