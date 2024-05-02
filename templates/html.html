@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web Tags</title>
+    <link type="text/css" rel="stylesheet" href="/static/style.css">
 </head>
 <body>
     <header>
@@ -16,10 +17,10 @@
                 <a href="/">Home</a>
             </li>
             <li>
-                <a href="/html">HTML</a>
+                <a href="/tag/html">HTML</a>
             </li>
             <li>
-                <a href="/css">CSS</a>
+                <a href="/tag/css">CSS</a>
             </li>
         </ul>
     </nav>
@@ -33,34 +34,12 @@
                     <td>Description</td>
                 </tr>
             </thead>
+            {% for definition in definitions %}
             <tr>
-                <td>h1</td>
-                <td>Heading 1 - the highest level of heading</td>
+                <td>{{ definition[0] }}</td>
+                <td>{{ definition[1] }}</td>
             </tr>
-            <tr>
-                <td>h2</td>
-                <td>Heading 2 - the next level of heading</td>
-            </tr>
-            <tr>
-                <td>h3 to h6</td>
-                <td>Heading 3 to 6 - the rest of the levels of heading</td>
-            </tr>
-            <tr>
-                <td>p</td>
-                <td>A Paragraph</td>
-            </tr>
-            <tr>
-                <td>head</td>
-                <td>The part of the page for the browser</td>
-            </tr>
-            <tr>
-                <td>body</td>
-                <td>the part of the page that displays on the screen</td>
-            </tr>
-            <tr>
-                <td>br</td>
-                <td>creates a line Break</td>
-            </tr>
+            {% endfor %}
             
         </table>
     </main>
