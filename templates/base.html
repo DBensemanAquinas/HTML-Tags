@@ -8,7 +8,7 @@
 </head>
 <body>
     <header>
-        <h1>HTML and CSS</h1>
+        <h1>HTML, CSS and Javascript</h1>
     </header>
 
     <nav>
@@ -23,25 +23,11 @@
                 <a href="/tag/css">CSS</a>
             </li>
         </ul>
+
     </nav>
 
     <main>
-        <h2>HTML Tags</h2>
-        <table>
-            <thead>
-                <tr>
-                    <td>Tag</td>
-                    <td>Description</td>
-                </tr>
-            </thead>
-            {% for definition in definitions %}
-            <tr>
-                <td>{{ definition[0] }}</td>
-                <td>{{ definition[1] }}</td>
-            </tr>
-            {% endfor %}
-            
-        </table>
+        {% block main %}{% endblock %}
     </main>
 
     <footer>

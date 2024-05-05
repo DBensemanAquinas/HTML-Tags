@@ -1,38 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Tags</title>
-    <link type="text/css" rel="stylesheet" href="/static/style.css">
-</head>
-<body>
-    <header>
-        <h1>HTML and CSS</h1>
-    </header>
+{% extends "base.html" %}
 
-    <nav>
-        <ul>
-            <li>
-                <a href="/">Home</a>
-            </li>
-            <li>
-                <a href="/tag/html">HTML</a>
-            </li>
-            <li>
-                <a href="tag/css">CSS</a>
-            </li>
-        </ul>
-
-    </nav>
-
-    <main>
+{% block main %}
         <h2>HTML Training</h2>
         <p>Welcome to my site.</p>
-    </main>
-
-    <footer>
-
-    </footer>
-</body>
-</html>
+{% endblock %}

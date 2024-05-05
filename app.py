@@ -34,7 +34,7 @@ def render_html(tag_type):
     definitions = cur.fetchall()
     conn.close()
 
-    return render_template("html.html", definitions=definitions)
+    return render_template("tags.html", definitions=definitions, tag_type=tag_type.upper())
 
 
 if __name__ == '__main__':

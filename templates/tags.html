@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block main %}
+        <h2>{{ tag_type }} Tags</h2>
+        <table>
+            <thead>
+                <tr>
+                    <td>Tag</td>
+                    <td>Description</td>
+                </tr>
+            </thead>
+            {% for definition in definitions %}
+            <tr>
+                <td>{{ definition[0] }}</td>
+                <td>{{ definition[1] }}</td>
+            </tr>
+            {% endfor %}
+            
+        </table>
+{% endblock %}
