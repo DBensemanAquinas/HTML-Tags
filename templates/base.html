@@ -16,12 +16,11 @@
             <li>
                 <a href="/">Home</a>
             </li>
+            {% for tag in tags %}
             <li>
-                <a href="/tag/html">HTML</a>
+                <a href="/tag/{{ tag }}">{{ tag }}</a>
             </li>
-            <li>
-                <a href="/tag/css">CSS</a>
-            </li>
+            {% endfor %}
         </ul>
 
     </nav>

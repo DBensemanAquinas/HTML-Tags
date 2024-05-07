@@ -19,10 +19,22 @@ def create_connection(db_file):
     return None
 
 
+def get_tag_types():
+    query = "SELECT DISTINCT type FROM tag"
+    conn = create_connection(DATABASE)
+    cur = conn.cursor()
+    cur.execute(query)
+    tag_list = cur.fetchall()
+    conn.close()
+    print(tag_list)
+    tags = []
+    for tag in tag_list:
+        tags.append(tag[0])
+    return tags
 
 @app.route('/')
 def render_home():
-    return render_template("index.html")
+    return render_template("index.html", tags=get_tag_types())
 
 
 @app.route('/tag/<tag_type>')
@@ -34,7 +46,7 @@ def render_html(tag_type):
     definitions = cur.fetchall()
     conn.close()
 
-    return render_template("tags.html", definitions=definitions, tag_type=tag_type.upper())
+    return render_template("tags.html", definitions=definitions, tag_type=tag_type.upper(), tags=get_tag_types())
 
 
 if __name__ == '__main__':
